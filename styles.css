@@ -1,0 +1,112 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    background-color: hsl(233, 47%, 7%);
+}
+.card {
+    display: flex;
+    width: 85%;
+    margin: 3% auto;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 6px;
+}
+.info {
+    padding: 50px;
+    width: 50%;
+}
+.main-heading {
+    color: hsl(0, 0%, 100%);
+}
+span {
+    color: hsl(277, 64%, 61%);
+}
+.main-text {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 2;
+}
+.stat-heading {
+    color:  hsl(0, 0%, 100%);
+    margin: 8px;
+    text-align: center;
+}
+.stat-titles {
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 8px;
+}
+.stat-section {
+    display: flex;
+}
+.stats {
+    display: flex;
+    margin: 10px;
+    margin-top: 60px;
+    flex-direction: column;
+}
+.image-section {
+    position: relative;
+    width: 50%;
+    background: url(images/image-header-desktop.jpg);
+    background-size: cover;
+    border-radius: 0px 6px 6px 0px;
+    cursor: pointer;
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 6px 6px 0px;
+    background-color: rgba(56, 14, 83, 0.7);
+    transition: 0.4s;
+}
+.image-overlay:hover {
+    opacity: 0;
+}
+@media screen and (max-width: 840px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-section {
+        order: 1;
+        width: 100%;
+        height: 50vh;
+        background: url(images/image-header-mobile.jpg);
+        border-radius: 6px 6px 0px 0px;
+        background-size: cover;
+    }
+    .image-overlay {
+        border-radius: 6px 6px 0px 0px;
+        height: 100%;
+    }
+    .info {
+        order: 2;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+        padding: 0px;
+    }
+    .main-heading {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 0px 12%;
+    }
+    .main-text {
+        text-align: center;
+        padding: 0px 17%;
+        font-size: 15px;
+    }
+    .stat-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .stats {
+        margin: 5px;
+    }
+}
